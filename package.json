@@ -1,0 +1,9 @@
+{
+  "name": "react-ts-lib-starter",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/podkhvatilin-my/react-ts-lib-starter",
+  "author": "Mykhailo Pidkhvatylin <michel.podkhvatilin@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
