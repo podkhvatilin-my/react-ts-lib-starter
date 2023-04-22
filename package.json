@@ -1,9 +1,46 @@
 {
   "name": "react-ts-lib-starter",
   "version": "0.0.0",
-  "main": "index.js",
   "repository": "https://github.com/podkhvatilin-my/react-ts-lib-starter",
   "author": "Mykhailo Pidkhvatylin <michel.podkhvatilin@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.14.2",
+    "yarn": ">=1.22.19"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/react-ts-lib-starter.umd.js",
+  "module": "./dist/react-ts-lib-starter.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/react-ts-lib-starter.es.js",
+      "require": "./dist/react-ts-lib-starter.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
+    "@vitejs/plugin-react": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.9",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.1",
+    "vite-plugin-dts": "^2.3.0"
+  }
 }
