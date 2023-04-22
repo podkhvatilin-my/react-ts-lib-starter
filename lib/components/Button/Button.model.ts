@@ -1,3 +1,3 @@
 export interface IButton {
-    type?: 'button' | 'submit'
+  type?: 'button' | 'submit';
 }

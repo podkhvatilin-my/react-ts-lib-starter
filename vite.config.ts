@@ -5,29 +5,29 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig(() => ({
-    plugins: [
-        react(),
-        dts({
-            include: ['lib']
-        })
-    ],
-    build: {
-        sourcemap: true,
-        lib: {
-            name: 'ReactTSLibStarter',
-            formats: ['es', 'umd'],
-            entry: resolve(__dirname, 'lib/index.ts'),
-            fileName: (format) => `react-ts-lib-starter.${format}.js`
+  plugins: [
+    react(),
+    dts({
+      include: ['lib'],
+    }),
+  ],
+  build: {
+    sourcemap: true,
+    lib: {
+      name: 'ReactTSLibStarter',
+      formats: ['es', 'umd'],
+      entry: resolve(__dirname, 'lib/index.ts'),
+      fileName: (format) => `react-ts-lib-starter.${format}.js`,
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom', 'styled-components'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          'styled-components': 'styled',
         },
-        rollupOptions: {
-            external: ['react', 'react-dom', 'styled-components'],
-            output: {
-                globals: {
-                    react: 'React',
-                    'react-dom': 'ReactDOM',
-                    'styled-components': 'styled'
-                }
-            }
-        }
-    }
+      },
+    },
+  },
 }));
