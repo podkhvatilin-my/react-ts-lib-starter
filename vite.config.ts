@@ -8,7 +8,7 @@ export default defineConfig(() => ({
     plugins: [
         react(),
         dts({
-            insertTypesEntry: true
+            include: ['lib']
         })
     ],
     build: {
@@ -20,11 +20,12 @@ export default defineConfig(() => ({
             fileName: (format) => `react-ts-lib-starter.${format}.js`
         },
         rollupOptions: {
-            external: ['react', 'react-dom'],
+            external: ['react', 'react-dom', 'styled-components'],
             output: {
                 globals: {
                     react: 'React',
-                    'react-dom': 'ReactDOM'
+                    'react-dom': 'ReactDOM',
+                    'styled-components': 'styled'
                 }
             }
         }
