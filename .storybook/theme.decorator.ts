@@ -1,6 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
-import { THEMES } from '../lib';
+import { DARK_THEME, LIGHT_THEME } from '@themes';
 
 const GlobalStyles = createGlobalStyle`
   html, body {
@@ -10,8 +10,8 @@ const GlobalStyles = createGlobalStyle`
 
 export const ThemeDecorator = withThemeFromJSXProvider({
   themes: {
-    light: THEMES.lightTheme,
-    dark: THEMES.darkTheme,
+    light: LIGHT_THEME ,
+    dark: DARK_THEME,
   },
   defaultTheme: 'light',
   Provider: ThemeProvider,

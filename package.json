@@ -4,7 +4,6 @@
   "repository": "https://github.com/podkhvatilin-my/react-ts-lib-starter",
   "author": "Mykhailo Pidkhvatylin <michel.podkhvatilin@gmail.com>",
   "license": "MIT",
-  "private": true,
   "type": "module",
   "engines": {
     "node": ">=18.16.0",

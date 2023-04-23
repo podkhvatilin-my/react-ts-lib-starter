@@ -12,6 +12,11 @@ export default defineConfig(() => ({
       include: ['lib'],
     }),
   ],
+  resolve: {
+    alias: {
+      '@themes': resolve(__dirname, 'lib/themes'),
+    },
+  },
   build: {
     sourcemap: true,
     lib: {
