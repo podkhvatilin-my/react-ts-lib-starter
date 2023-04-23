@@ -19,6 +19,7 @@
   },
   "include": [
     "src",
+    ".storybook/**/*.ts",
     "lib/**/*.ts",
     "lib/**/*.tsx",
     "vite.config.ts",

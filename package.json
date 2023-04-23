@@ -7,7 +7,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=18.14.2",
+    "node": ">=18.16.0",
     "yarn": ">=1.22.19"
   },
   "files": [
@@ -26,8 +26,11 @@
     "build": "tsc && vite build",
     "lint": "eslint 'lib/**/*.{ts,tsx}'",
     "lint:fix": "eslint 'lib/**/*.{ts,tsx}' --fix",
-    "test": "vitest",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
     "test:coverage": "vitest run --coverage",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "prepare": "husky install"
   },
   "peerDependencies": {
@@ -36,6 +39,14 @@
     "styled-components": "^5.3.9"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-interactions": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/addon-styling": "^1.0.1",
+    "@storybook/blocks": "^7.0.6",
+    "@storybook/react": "^7.0.6",
+    "@storybook/react-vite": "^7.0.6",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^18.15.13",
@@ -58,8 +69,10 @@
     "husky": "^8.0.3",
     "jsdom": "^21.1.1",
     "prettier": "^2.8.7",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "storybook": "^7.0.6",
     "styled-components": "^5.3.9",
     "typescript": "^5.0.4",
     "vite": "^4.3.1",
